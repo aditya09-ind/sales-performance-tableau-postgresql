@@ -1,0 +1,4 @@
+Sales Performance Analytics Dashboard | Tableau, PostgreSQL, SQL
+• Built an interactive Tableau dashboard using PostgreSQL-backed sales data to analyze revenue, profitability, regional performance, product trends, and manager KPIs across 1,800 transactions.
+• Wrote SQL queries for monthly, regional, category, product, and manager-level analysis and created calculated Tableau metrics including profit margin and average order value.
+• Added interactive filters and KPI views to support business-focused exploration of sales and profitability trends.

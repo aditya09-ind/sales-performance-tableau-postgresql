@@ -1,0 +1,4 @@
+# No Python package is required to use the Tableau/PostgreSQL project.
+# Optional: pandas, numpy are used only if regenerating the dataset.
+pandas
+numpy

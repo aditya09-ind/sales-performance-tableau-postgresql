@@ -1,0 +1,12 @@
+field,description,type
+order_id,Unique transaction ID,string
+order_date,Order date,date
+region,Sales region,string
+category,Product category,string
+product,Product name,string
+sales_manager,Assigned sales manager,string
+units_sold,Quantity sold,integer
+unit_price,Price per unit before discount,decimal
+discount_rate,Discount percentage,decimal
+net_sales,Net revenue after discount,decimal
+profit,Profit after estimated cost,decimal
