@@ -1,128 +1,76 @@
 # Sales Performance Analytics Dashboard — Tableau + PostgreSQL
 
-## Project Overview
-An end-to-end business intelligence project that combines **PostgreSQL** for data storage and SQL analysis with **Tableau** for interactive visualization.
+An end-to-end data analytics project demonstrating **PostgreSQL, SQL, Python, Tableau, data modeling, data validation, and business intelligence**.
 
-The project analyzes sales, profitability, products, regions, categories, and sales-manager performance and converts transactional data into an executive-friendly dashboard.
+The project analyzes 1,800 sales transactions to identify trends in revenue, profit, regional performance, product profitability, category performance, and sales-manager performance.
 
-## Business Questions
-- How are sales and profit changing over time?
-- Which regions generate the most revenue and profit?
-- Which product categories perform best?
-- Which products contribute the most profit?
-- How do sales managers compare?
-- What is the average order value and profit margin?
+## 🔗 Live Tableau Dashboard
 
-## Tech Stack
-- **PostgreSQL** — relational database and SQL analysis
-- **Tableau** — dashboarding and visualization
-- **CSV** — source data
-- **Git/GitHub** — version control
+👉 **[View Interactive Tableau Dashboard](https://public.tableau.com/app/profile/aditya.tripathi8577/viz/SalesPerformanceAnalyticsDashboard_17903601864600/Dashboard1)**
 
-## Dataset
-`data/sales_performance.csv` contains 1,800 synthetic sales transactions covering January–December 2025.
+---
 
-Fields:
-- order_id
-- order_date
-- region
-- category
-- product
-- sales_manager
-- units_sold
-- unit_price
-- discount_rate
-- net_sales
-- profit
+## 📊 Project Overview
 
-> The dataset is synthetic and created specifically for portfolio/learning purposes. Do not present it as company or client data.
+The objective of this project is to build an end-to-end sales analytics solution using PostgreSQL and Tableau.
 
-## Project Architecture
+The workflow follows:
 
-CSV → PostgreSQL → SQL Analysis → Tableau → Interactive Dashboard
+**Raw Sales Data → Data Validation → PostgreSQL → SQL Analysis → Tableau → Business Insights**
 
-Tableau can also connect directly to the CSV for the public portfolio version. Tableau supports text/CSV connections, while Tableau Desktop/Cloud supports PostgreSQL connections. See the official Tableau documentation linked below.
+The project demonstrates how structured sales data can be transformed into interactive business intelligence dashboards for decision-making.
 
-## Setup
+> **Dataset note:** The dataset used in this project is synthetic and was created for portfolio and learning purposes. It does not represent confidential company or client data.
 
-### 1. Clone the repository
-```bash
-git clone https://github.com/YOUR_USERNAME/sales-performance-tableau-postgresql.git
-cd sales-performance-tableau-postgresql
-```
+---
 
-### 2. PostgreSQL
-Create a database, then run:
+## 🎯 Business Objectives
 
-```sql
-sql/sales_performance.sql
-```
+The analysis focuses on answering questions such as:
 
-Import `data/sales_performance.csv` into the `sales_performance` table using pgAdmin or PostgreSQL's COPY/import workflow.
+- What is the monthly sales and profit trend?
+- Which regions generate the highest sales?
+- Which product categories contribute the most revenue and profit?
+- Which products generate the highest profit?
+- How do sales managers perform against each other?
+- What is the overall profit margin?
+- How can SQL and Tableau be used together for business reporting?
 
-### 3. Connect Tableau to PostgreSQL
-In Tableau:
-1. Connect → PostgreSQL
-2. Enter server, database, username, and password
-3. Select `sales_performance`
-4. Open a worksheet
+---
 
-Official Tableau PostgreSQL connection guide:
-https://help.tableau.com/current/pro/desktop/en-us/examples_postgresql.htm
+## 🛠️ Tech Stack
 
-### 4. Create calculated fields
-Use the formulas in:
-`tableau/calculated_fields.md`
+| Technology | Purpose |
+|---|---|
+| **PostgreSQL** | Database storage and data management |
+| **SQL** | Data querying and business analysis |
+| **Tableau Public** | Interactive dashboard and visualization |
+| **Python / Pandas** | Data preparation and validation |
+| **CSV** | Source dataset |
+| **Git / GitHub** | Version control and project hosting |
 
-Tableau calculated fields allow you to create fields such as ratios and other derived metrics without modifying the original source data.
+---
 
-### 5. Build the dashboard
+## 📁 Project Structure
 
-Recommended layout:
-
-**Top:** KPI cards
-- Total Sales
-- Total Profit
-- Profit Margin
-- Units Sold
-- Average Order Value
-
-**Middle:**
-- Monthly Sales & Profit trend
-- Sales by Region
-
-**Bottom:**
-- Category Sales vs Profit
-- Top 10 Products by Profit
-- Sales Manager Performance
-
-**Filters:**
-- Date
-- Region
-- Category
-- Sales Manager
-
-### 6. Publish
-For a portfolio:
-- Save the Tableau workbook as `.twb` or `.twbx`
-- Publish the visualization to Tableau Public if appropriate
-- Add the Tableau Public URL to this README
-- Add dashboard screenshots to `docs/`
-
-## Portfolio Resume Bullet
-
-**Sales Performance Analytics Dashboard | Tableau, PostgreSQL, SQL**
-- Built an interactive Tableau dashboard using PostgreSQL-backed sales data to analyze revenue, profitability, regional performance, product trends, and manager KPIs across 1,800 transactions.
-- Wrote SQL queries for monthly, regional, category, product, and manager-level analysis and created calculated Tableau metrics including profit margin and average order value.
-- Added interactive filters and KPI views to support business-focused exploration of sales and profitability trends.
-
-## Skills Demonstrated
-PostgreSQL • SQL • Tableau • Data Modeling • Data Visualization • Calculated Fields • Dashboard Design • KPI Reporting • Business Analytics • Git/GitHub
-
-## Important
-The dataset is synthetic. Keep the project clearly labeled as a portfolio project and do not claim that the results represent a real company.
-
-## Official Documentation
-- Tableau PostgreSQL connector: https://help.tableau.com/current/pro/desktop/en-us/examples_postgresql.htm
-- Tableau calculated fields: https://help.tableau.com/current/pro/desktop/en-us/calculations_calculatedfields_formulas.htm
-- Tableau web data connections: https://help.tableau.com/current/online/en-us/creator_connect.htm
+```text
+sales-performance-tableau-postgresql/
+│
+├── data/
+│   ├── sales_performance.csv
+│   └── data_dictionary.csv
+│
+├── docs/
+│   ├── dashboard_build_guide.md
+│   └── resume_project_bullet.txt
+│
+├── sql/
+│   └── sales_performance.sql
+│
+├── tableau/
+│   └── calculated_fields.md
+│
+├── .gitignore
+├── LICENSE
+├── README.md
+└── requirements.txt
